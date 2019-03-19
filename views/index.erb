@@ -1,6 +1,5 @@
-<h1>Mi cuenta es: <%=@count%></h1>
+<h1>Hola</h1>
 
-<form action="/count" method="post">
-     <input type="submit" value="Suma!!"></input>
-     <input type="hidden" name="count" value=<%="#{@count}"%>></input>
-</form>
+<%(1..50).each do |i| %>
+   <%= i.even? ? "#{i} Soy par <br/>" : "#{i} Soy Impar <br/>"%>
+<%end%>
