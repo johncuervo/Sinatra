@@ -58,34 +58,34 @@ require "sinatra"
 
 ##Suma Números!
 
-# get '/' do
-#   @count = params[:item]
-#   @count = 0 if @count == nil
-#   erb :index
-# end
-#
-# post '/count' do
-#   @count = params[:count].to_i + 1
-#   redirect "/?item=#{@count}"
-# end
+get '/' do
+  @count = params[:item]
+  @count = 0 if @count == nil
+  erb :index
+end
+
+post '/count' do
+  @count = params[:count].to_i + 1
+  redirect "/?item=#{@count}"
+end
 
 ###---------------------------------------------------------
 ###---------------------------------------------------------
 
 ##Abuelita sorda
 
-get '/' do
-  erb :index
-end
-
-post '/abuela' do
-  if params[:frase] == params[:frase].upcase
-    <<-HTML
-    <h1>Ahhh si, manzanas!</h1>
-    HTML
-  else
-    <<-HTML
-    <h1>Habla más duro mijito</h1>
-    HTML
-  end
-end
+# get '/' do
+#   erb :index
+# end
+#
+# post '/abuela' do
+#   if params[:frase] == params[:frase].upcase
+#     <<-HTML
+#     <h1>Ahhh si, manzanas!</h1>
+#     HTML
+#   else
+#     <<-HTML
+#     <h1>Habla más duro mijito</h1>
+#     HTML
+#   end
+# end

@@ -1,7 +1,6 @@
-<h1>Abuela Sorda</h1>
+<h1>Mi cuenta es: <%=@count%></h1>
 
-<form action="/abuela" method="post">
-     <p>Di algo Abuela</p>
-     <input type="text"  name="frase" ></input>
-     <input type="submit" value="Dilo!"></input>
+<form action="/count" method="post">
+     <input type="submit" value="Suma!!"></input>
+     <input type="hidden" name="count" value=<%="#{@count}"%>></input>
 </form>
